@@ -58,14 +58,14 @@ load test_helper
   cd $TEST_REPO
   echo '@todo' > $TEST_REPO/history_failure.txt
   git add -A
-  git commit -m "Testing history"
+  git commit -m "Testing history" --no-verify
   echo 'todo' > $TEST_REPO/history_failure.txt
   git add -A
-  git commit -m "Testing history"
+  git commit -m "Testing history" --no-verify
   git checkout -b testbranch
   echo '@todo' > $TEST_REPO/history_failure.txt
   git add -A
-  git commit -m "Testing history"
+  git commit -m "Testing history" --no-verify
   git checkout master
   cd -
   repo_run git-secrets --scan-history

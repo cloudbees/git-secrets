@@ -79,7 +79,7 @@ setup_bad_repo_history() {
   cd $TEST_REPO
   echo '@todo' > $TEST_REPO/history_failure.txt
   git add -A
-  git commit -m "Testing history"
+  git commit -m "Testing history" --no-verify
   echo 'todo' > $TEST_REPO/history_failure.txt
   git add -A
   cd -
