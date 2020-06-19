@@ -364,7 +364,7 @@ load test_helper
   cd $TEST_REPO
   echo 'WHITESPACE' > $TEST_REPO/ok.txt
   git add -A
-  git commit -m "Testing pattern minus all of the spacess"
+  git commit -m "Testing pattern minus all of the spacess" --no-verify
   repo_run git-secrets --scan
   [ $status -eq 0 ]
 }
@@ -373,7 +373,7 @@ load test_helper
   cd $TEST_REPO
   echo 'WHITE SPACE' > $TEST_REPO/ok.txt
   git add -A
-  git commit -m "Testing pattern with all of the spaces"
+  git commit -m "Testing pattern with all of the spaces" --no-verify
   repo_run git-secrets --scan
   [ $status -eq 1 ]
 }
